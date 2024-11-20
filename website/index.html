@@ -1,39 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Testing any chasnges2!</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Honors 360 Project</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    /* Projects Section */
+    .projects-section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .projects-section h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #4a90e2;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Project Card Styles */
+    .project-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-card h3 {
+      margin: 20px;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .project-card p {
+      margin: 0 20px 20px;
+      color: #666;
+      font-size: 1em;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+
+      .projects-section h2 {
+        font-size: 2em;
+      }
+
+      .project-card {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Brian Andres</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="home2">
-        <h2>Resume</h2>
-        <p>College GPA 3.94, last 6 semesters: 4.0. Highschool GPA: 4.52</p>
-    </section>
-    <section id="services">
-        <h2>Applications Made</h2>
-        <p>Information about services offered.</p>
-    </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Some information about me or the company.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>How to contact us.</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 My Simple Website</p>
-    </footer>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Honors 360 Project</h1>
+    <p>Showcasing innovative projects from outstanding students.</p>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <h2>Our Projects</h2>
+    <div class="projects-container">
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200.png?text=AI+Chatbot" alt="AI-Powered Chatbot">
+        <h3>AI-Powered Chatbot</h3>
+        <p>A chatbot that uses machine learning to understand and respond to user queries.</p>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200.png?text=Renewable+Energy" alt="Renewable Energy Solutions">
+        <h3>Renewable Energy Solutions</h3>
+        <p>Innovative projects focused on harnessing renewable energy sources.</p>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200.png?text=Smart+Home" alt="Smart Home Automation">
+        <h3>Smart Home Automation</h3>
+        <p>Automating home systems for improved efficiency and convenience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; <span id="year"></span> Honors 360 Project. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript to display current year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
