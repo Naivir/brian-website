@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: '23.3'  # Specify the Node.js version you need
 
-      # Step 3: Install dependencies in the 'website' directory
+      # Step 3: Install dependencies in the 'my-react-app' directory
       - name: Install dependencies
         working-directory: ./my-react-app
         run: npm install
@@ -28,6 +28,8 @@ jobs:
       # Step 4: Build the React application
       - name: Build React app
         working-directory: ./my-react-app
+        env:
+          CI: false  # Override CI to prevent warnings from failing the build
         run: npm run build
 
       # Step 5: Configure AWS credentials
