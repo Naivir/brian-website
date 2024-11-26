@@ -45,6 +45,7 @@ const HighWorkload = () => {
           <p>
             For example, contract based professors are expected to teach 12 credit hours a semester at GMU. This leaves no time for research, collaboration, or learning. On the other side, tenure-track professors are expected to publish exaboratant amount of work, leading to an unhealthy work culture at the college.
           </p>
+            <p> Whats even more absurd is that if you are not hired on as a tenure-tracked employee, there is no possibility for you to get tenure. Additionally, there is very little upward mobility for people seeking promotions or pay raises as faculty.</p>
           <p>
             A study conducted at Boise State University revealed that faculty members spend approximately 61 hours per week on their duties, surpassing the standard 40-hour workweek. Of these, 40% are dedicated to teaching, while a mere 3% is allocated to research. At GMU, the tenure requirements impose teaching responsibilities of at least 12 credit hours per semester for full-time faculty and 6 credit hours for tenure-track faculty, supplemented by 3 credit hours each in research and service.
           </p>
