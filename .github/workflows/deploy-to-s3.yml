@@ -3,28 +3,31 @@ name: Deploy React App to S3
 on:
   push:
     branches:
-      - main  # Set this to your default branch
+      - main  # Trigger the workflow on pushes to the main branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      # Step 1: Checkout the code
+      # Step 1: Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Set up Node.js (for building the React app)
+      # Step 2: Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Use the Node.js version compatible with your React app
+          node-version: '16'  # Specify the Node.js version you need
 
-      # Step 3: Install dependencies
+      # Step 3: Install dependencies in the 'website' directory
       - name: Install dependencies
+        working-directory: ./website
         run: npm install
 
-      # Step 4: Build the React app
+      # Step 4: Build the React application
       - name: Build React app
+        working-directory: ./website
         run: npm run build
 
       # Step 5: Configure AWS credentials
@@ -35,7 +38,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      # Step 6: Deploy the built React app to S3
+      # Step 6: Deploy the build to S3
       - name: Deploy to S3
         run: |
-          aws s3 sync ./build s3://${{ secrets.S3_BUCKET }} --delete
+          aws s3 sync ./website/build s3://${{ secrets.S3_BUCKET }} --delete
