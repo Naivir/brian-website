@@ -22,12 +22,12 @@ jobs:
 
       # Step 3: Install dependencies in the 'website' directory
       - name: Install dependencies
-        working-directory: ./website
+        working-directory: ./my-react-app
         run: npm install
 
       # Step 4: Build the React application
       - name: Build React app
-        working-directory: ./website
+        working-directory: ./my-react-app
         run: npm run build
 
       # Step 5: Configure AWS credentials
@@ -41,4 +41,4 @@ jobs:
       # Step 6: Deploy the build to S3
       - name: Deploy to S3
         run: |
-          aws s3 sync ./website/build s3://${{ secrets.S3_BUCKET }} --delete
+          aws s3 sync ./my-react-app/build s3://${{ secrets.S3_BUCKET }} --delete
