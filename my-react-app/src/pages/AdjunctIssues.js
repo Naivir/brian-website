@@ -50,7 +50,7 @@ const AdjunctIssues = () => {
         <Col md={6}>
           <h1><FaUserTie /> Issues with Adjunct Professors</h1>
           <p>
-            At GMU, adjunct faculty constitute a significant portion of the workforce, making up 48% of the total faculty. These professionals play a crucial role in bridging the gap between academic theories and industry practices, ensuring that students receive relevant and up-to-date education. However, the compensation for adjuncts is alarmingly low, with an average annual salary of $21,979. The national average salary is around $100,000!.
+            At GMU, adjunct faculty constitute a significant portion of the workforce, wt=ith part-time employees making up 48% of the total faculty. These professionals play a crucial role in bridging the gap between academic theories and industry practices, ensuring that students receive relevant and up-to-date education. However, the compensation for adjuncts is alarmingly low, with an average annual salary of $21,979. The national average salary is around $100,000!.
           </p>
           <p>
             This systemic undervaluation not only affects the quality of education but also limits the ability of adjuncts to secure tenure. The lack of fair pay and insufficient support from the administration exacerbate the challenges faced by adjunct faculty, making it difficult for them to balance their professional responsibilities with personal financial stability.
@@ -70,7 +70,7 @@ const AdjunctIssues = () => {
                 <th>Category</th>
                 <th>Count</th>
                 <th>Percentage</th>
-                <th>Average Salary</th>
+                <th>Average Salary (indeed.com)</th>
               </tr>
             </thead>
             <tbody>

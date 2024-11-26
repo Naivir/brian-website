@@ -1,34 +1,32 @@
 // src/components/Header.js
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Navbar, Nav, Container } from 'react-bootstrap'; // If using React Bootstrap
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import './Header.css';
-// import logo from '../assets/gmu-logo.png'; // Ensure the path is correct
+// import logo from '../assets/gmu-logo.png'; // Ensure you have a high-quality logo image
 
 const Header = () => {
   return (
-    <Navbar bg="primary" variant="dark" expand="lg" sticky="top">
+    <Navbar expand="lg" className="custom-navbar">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={NavLink} to="/">
           <img
             // src={logo}
-            width="50"
-            height="50"
-            className="d-inline-block align-top"
-            alt="GMU Logo"
-          />{' '}
-          Faculty Advocates
+            alt="Website Logo"
+            className="logo"
+          />
+          <span className="brand-text">Faculty Advocates</span>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="navbar-nav" className="custom-toggler" />
+        <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={NavLink} to="/" exact="true">
+            <Nav.Link as={NavLink} to="/" exact="true" activeClassName="active-link">
               High Workload
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/budget">
+            <Nav.Link as={NavLink} to="/budget" activeClassName="active-link">
               Faculty Budget
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/adjunct-issues">
+            <Nav.Link as={NavLink} to="/adjunct-issues" activeClassName="active-link">
               Adjunct Issues
             </Nav.Link>
           </Nav>
