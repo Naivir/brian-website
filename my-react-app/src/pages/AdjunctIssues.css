@@ -1,0 +1,56 @@
+/* src/pages/AdjunctIssues.css */
+
+/* Image Styling */
+.page-container img {
+    margin-bottom: 20px;
+  }
+  
+  /* Table Styling */
+  .page-container table {
+    margin-top: 20px;
+  }
+  
+  .page-container table th, 
+  .page-container table td {
+    text-align: center;
+  }
+  
+  /* Section Titles */
+  .page-container h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #0f4c81;
+  }
+  
+  /* List Styling */
+  .page-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .page-container ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* References Section */
+  .page-container .references {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-left: 5px solid #0f4c81;
+    border-radius: 4px;
+  }
+  
+  /* Additional Elements */
+  .page-container .additional-issues {
+    margin-top: 30px;
+  }
+  
+  .page-container .additional-issues ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  .page-container .additional-issues ul li {
+    margin-bottom: 10px;
+  }
+  

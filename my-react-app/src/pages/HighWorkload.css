@@ -1,0 +1,32 @@
+/* src/pages/HighWorkload.css */
+
+/* Image Styling */
+.page-container img {
+    margin-bottom: 20px;
+  }
+  
+  /* Section Titles */
+  .page-container h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #0f4c81;
+  }
+  
+  /* List Styling */
+  .page-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .page-container ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* References Section */
+  .page-container .references {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-left: 5px solid #0f4c81;
+    border-radius: 4px;
+  }
+  

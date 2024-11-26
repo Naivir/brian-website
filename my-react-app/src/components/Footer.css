@@ -1,0 +1,38 @@
+/* src/components/Footer.css */
+
+/* Footer Container */
+.footer {
+    background-color: #0f4c81; /* GMU Blue */
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Footer Links */
+  .footer a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #ffd700; /* Gold on hover */
+    text-decoration: underline;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer {
+      text-align: center;
+    }
+  
+    .footer a {
+      display: block;
+      margin: 5px 0;
+    }
+  }
+  
