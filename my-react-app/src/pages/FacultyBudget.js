@@ -67,7 +67,7 @@ const FacultyBudget = () => {
             The current budget allocation reveals significant investments in faculty and administrative salaries, yet the high operational costs continue to drain resources. With 2,133 academic staff and 40,185 students (fall 2023), the administration-to-faculty ratio remains a pressing concern, complicating effective resource management.
           </p>
           <p>
-            Additionally, GMU has been getting criticized for its questionable budget courses, for example spending $500,000 on a new logo that many find simplistic. Additionally, in recent years we've seen GMU put an emphasis on expanding (sallelite campuses, more students) rather than fortifying or fixing problems they have already. This lack of management is causing great strain on both students and faculty.
+            Additionally, GMU has been getting criticized for its questionable budget choices, for example spending $500,000 on a new logo that many find simplistic. Additionally, in recent years we've seen GMU put an emphasis on expanding (sallelite campuses, more students) rather than fortifying or fixing problems they have already. This lack of management is causing great strain on both students and faculty.
           </p>
           <p>
             The objective of this platform is to shed light on these budgetary challenges, enabling faculty to voice their concerns and advocate for more transparent and strategic financial planning. By fostering an open dialogue, we aim to hold administrators accountable and ensure that financial decisions align with the academic mission of the institution.

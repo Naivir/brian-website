@@ -48,7 +48,7 @@ const AdjunctIssues = () => {
           <Image src={adjunctImage} alt="Adjunct Professors" fluid rounded loading="lazy" />
         </Col>
         <Col md={6}>
-          <h1><FaUserTie /> Issues with Adjunct Professors</h1>
+          <h1><FaUserTie /> Mistreament of Adjunct Professors</h1>
           <p>
             At GMU, adjunct faculty constitute a significant portion of the workforce, wt=ith part-time employees making up 48% of the total faculty. These professionals play a crucial role in bridging the gap between academic theories and industry practices, ensuring that students receive relevant and up-to-date education. However, the compensation for adjuncts is alarmingly low, with an average annual salary of $21,979. The national average salary is around $100,000!.
           </p>
