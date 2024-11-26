@@ -3,16 +3,7 @@
 /* Image Styling */
 .page-container img {
     margin-bottom: 20px;
-  }
-  
-  /* Table Styling */
-  .page-container table {
-    margin-top: 20px;
-  }
-  
-  .page-container table th, 
-  .page-container table td {
-    text-align: center;
+    border: 2px solid #0f4c81;
   }
   
   /* Section Titles */
@@ -20,6 +11,12 @@
     margin-top: 30px;
     margin-bottom: 15px;
     color: #0f4c81;
+    display: flex;
+    align-items: center;
+  }
+  
+  .page-container h3 svg {
+    margin-right: 10px;
   }
   
   /* List Styling */
@@ -30,6 +27,7 @@
   
   .page-container ul li {
     margin-bottom: 10px;
+    color: #555555;
   }
   
   /* References Section */
@@ -40,7 +38,7 @@
     border-radius: 4px;
   }
   
-  /* Additional Elements */
+  /* Additional Issues Section */
   .page-container .additional-issues {
     margin-top: 30px;
   }
@@ -52,5 +50,6 @@
   
   .page-container .additional-issues ul li {
     margin-bottom: 10px;
+    color: #555555;
   }
   

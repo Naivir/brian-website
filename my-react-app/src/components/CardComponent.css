@@ -32,11 +32,12 @@
     border: none;
     margin-right: 10px;
     margin-bottom: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
   .card-links .btn:hover {
     background-color: #ffd700;
     color: #000000;
+    transform: scale(1.05);
   }
   

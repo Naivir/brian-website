@@ -136,3 +136,11 @@ th {
 .references a:hover {
   color: #ffd700;
 }
+
+/* Loading Spinner */
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  padding: 50px 0;
+}

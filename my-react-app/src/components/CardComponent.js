@@ -1,7 +1,7 @@
 // src/components/CardComponent.js
 import React from 'react';
-import { Card, Button } from 'react-bootstrap'; // If using React Bootstrap
-import './CardComponent.css'; // Optional: For additional styling
+import { Card, Button } from 'react-bootstrap';
+import './CardComponent.css';
 
 const CardComponent = ({ title, text, links }) => {
   return (

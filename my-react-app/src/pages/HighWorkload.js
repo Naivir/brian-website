@@ -1,12 +1,13 @@
 // src/pages/HighWorkload.js
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap'; // If using React Bootstrap
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import CardComponent from '../components/CardComponent';
-// import workloadImage from '../assets/workload.jpg'; // Add a relevant image in assets
-import './HighWorkload.css'; // Optional: For specific styling
+import workloadImage from '../assets/workload.jpg'; // Ensure this image exists
+import { FaBook, FaUserClock } from 'react-icons/fa';
+import './HighWorkload.css';
 
 const HighWorkload = () => {
-  const links = [
+  const tenureLinks = [
     {
       url: 'https://provost.gmu.edu/faculty/tenure-line-faculty-renewal-promotion-and-tenure',
       label: 'GMU Tenure Requirements',
@@ -17,15 +18,27 @@ const HighWorkload = () => {
     },
   ];
 
+  const publishQualityLink = {
+    url: 'https://www.library.hbs.edu/working-knowledge/publish-or-perish-what-the-research-says-about-productivity-in-academia',
+    label: 'Publish or Perish: Research Insights',
+  };
+
+  const questions = [
+    'How many hours per week is normal?',
+    'What are most of those hours for?',
+    'What do you wish you had more time for?',
+    'How would the college go about doing that?',
+  ];
+
   return (
     <Container className="page-container my-5">
       <Row>
         <Col md={6}>
-          {/* <Image src={workloadImage} alt="High Workload" fluid rounded /> */}
+          <Image src={workloadImage} alt="High Workload" fluid rounded loading="lazy" />
         </Col>
         <Col md={6}>
-          <h1>High Workload Quantity</h1>
-          <h3>Goal: Quality Over Quantity in Research Publications</h3>
+          <h1><FaUserClock /> High Workload Quantity</h1>
+          <h3><FaBook /> Goal: Quality Over Quantity in Research Publications</h3>
           <p>
             Faculty at George Mason University (GMU) are mandated to excel in multiple domains to secure tenure, including teaching, research, and leadership. This multifaceted expectation often leads to an overwhelming workload, hindering the ability to focus on high-quality research.
           </p>
@@ -43,12 +56,7 @@ const HighWorkload = () => {
           <CardComponent
             title="Impact on Research Quality"
             text="The necessity to meet high workload demands results in rushed research endeavors, limiting the depth and innovation of publications. Faculty members are unable to dedicate sufficient time to explore complex research questions, leading to superficial studies that do not contribute significantly to their fields."
-            links={[
-              {
-                url: 'https://library.hbs.edu/working-knowledge/publish-or-perish-what-the-research-says-about-productivity-in-academia',
-                label: 'Publish or Perish: Research Insights',
-              },
-            ]}
+            links={[publishQualityLink]}
           />
         </Col>
       </Row>
@@ -78,6 +86,17 @@ const HighWorkload = () => {
           </ul>
         </Col>
       </Row>
+
+      {/* <Row className="mt-4">
+        <Col>
+          <h3>Frequently Asked Questions</h3>
+          <ul>
+            {questions.map((question, index) => (
+              <li key={index}>{question}</li>
+            ))}
+          </ul>
+        </Col>
+      </Row> */}
     </Container>
   );
 };
