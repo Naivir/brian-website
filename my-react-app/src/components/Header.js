@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <Navbar expand="lg" className="custom-navbar">
       <Container>
-        <Navbar.Brand as={NavLink} to="/">
+        <Navbar.Brand as={NavLink} to="/index.html">
           <img
             src={logo}
             alt="Website Logo"
