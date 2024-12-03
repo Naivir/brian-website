@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import HighWorkload from './pages/HighWorkload';
 import FacultyBudget from './pages/FacultyBudget';
 import AdjunctIssues from './pages/AdjunctIssues';
+import HomePage from './pages/HomePage';
 import './App.css'; // Optional: For global styling
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
         <Header />
         <div className="content">
           <Routes>
-            <Route path="/" element={<HighWorkload />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/high-work-load" element={<HighWorkload />} />
             <Route path="/budget" element={<FacultyBudget />} />
             <Route path="/adjunct-issues" element={<AdjunctIssues />} />
           </Routes>

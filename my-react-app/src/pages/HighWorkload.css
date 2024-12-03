@@ -1,40 +1,138 @@
 /* src/pages/HighWorkload.css */
 
+/* General Styling */
+.page-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* Image Styling */
 .page-container img {
-    margin-bottom: 20px;
-    border: 2px solid #0f4c81;
+  margin-bottom: 20px;
+  border: none;
+}
+
+/* Section Titles */
+.section-title {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.section-title svg {
+  margin-right: 10px;
+}
+
+/* Overview Section Styling */
+.section-overview {
+  background-color: #f0f8ff; /* AliceBlue - light tint of primary color */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.overview-icon {
+  color: #0f4c81; /* Primary color */
+}
+
+.overview-title {
+  color: #0f4c81; /* Primary color */
+}
+
+/* Teaching Load Section Styling */
+.section-teaching {
+  background-color: #e6f2ff; /* Lighter tint of primary color */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.teaching-icon {
+  color: #1a5a99; /* Slightly lighter shade */
+}
+
+.teaching-title {
+  color: #1a5a99; /* Slightly lighter shade */
+}
+
+/* Tenure and Promotion Section Styling */
+.section-tenure {
+  background-color: #d9e6f2; /* Even lighter tint */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tenure-icon {
+  color: #3a7ca5; /* Another shade within the palette */
+}
+
+.tenure-title {
+  color: #3a7ca5; /* Another shade within the palette */
+}
+
+/* Work Hours Comparison Section Styling */
+.section-workhours {
+  background-color: #cce0ef; /* Another light tint */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.workhours-title {
+  color: #0f4c81; /* Primary color */
+}
+
+/* Supporting Data Section */
+.supporting-data-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.supporting-data-list li {
+  margin-bottom: 10px;
+  color: #555555;
+}
+
+/* Call to Action Section */
+.cta-section {
+  background-color: #0f4c81;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-section:hover {
+  background-color: #0d3b6e;
+  transform: scale(1.02);
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-section button {
+  padding: 10px 30px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-section button:hover {
+  background-color: #ffd700;
+  color: #0f4c81;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 50px 20px;
   }
-  
-  /* Section Titles */
-  .page-container h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #0f4c81;
-    display: flex;
-    align-items: center;
+
+  .cta-section h2 {
+    font-size: 1.5rem;
   }
-  
-  .page-container h3 svg {
-    margin-right: 10px;
+
+  .cta-section p {
+    font-size: 1rem;
   }
-  
-  /* List Styling */
-  .page-container ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
-  .page-container ul li {
-    margin-bottom: 10px;
-    color: #555555;
-  }
-  
-  /* References Section */
-  .page-container .references {
-    background-color: #f1f1f1;
-    padding: 20px;
-    border-left: 5px solid #0f4c81;
-    border-radius: 4px;
-  }
-  
+}

@@ -1,51 +1,109 @@
 /* src/pages/FacultyBudget.css */
 
+/* General Styling */
+.page-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* Image Styling */
 .page-container img {
-    margin-bottom: 20px;
-    border: 2px solid #0f4c81;
+  margin-bottom: 20px;
+  border: none;
+}
+
+/* Section Titles */
+.page-container h2 {
+  color: #0f4c81;
+  margin-bottom: 20px;
+}
+
+.page-container h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #0f4c81;
+  display: flex;
+  align-items: center;
+}
+
+.page-container h3 svg {
+  margin-right: 10px;
+}
+
+/* Progress Bars */
+.progress {
+  height: 25px;
+  border-radius: 12px;
+}
+
+.progress-bar {
+  line-height: 25px;
+  font-size: 0.9rem;
+}
+
+/* Table Styling */
+.modern-table {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modern-table th {
+  background-color: #0f4c81;
+  color: #fff;
+}
+
+.modern-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.modern-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Card Component Styling */
+.custom-card {
+  border: none;
+  border-radius: 10px;
+}
+
+.custom-card .card-title {
+  color: #0f4c81;
+  font-weight: bold;
+}
+
+.custom-card .card-text {
+  color: #555555;
+}
+
+.custom-card .btn {
+  margin-top: 10px;
+}
+
+/* Call to Action Section */
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-section button {
+  padding: 10px 30px;
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 50px 20px;
   }
-  
-  /* Section Titles */
-  .page-container h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #0f4c81;
-    display: flex;
-    align-items: center;
+
+  .cta-section h2 {
+    font-size: 1.5rem;
   }
-  
-  .page-container h3 svg {
-    margin-right: 10px;
+
+  .cta-section p {
+    font-size: 1rem;
   }
-  
-  /* Progress Bars */
-  .progress {
-    height: 25px;
-    border-radius: 12px;
-  }
-  
-  .progress-bar {
-    line-height: 25px;
-    font-size: 0.9rem;
-  }
-  
-  /* Table Styling */
-  .page-container table {
-    margin-top: 20px;
-  }
-  
-  .page-container table th,
-  .page-container table td {
-    text-align: center;
-    vertical-align: middle;
-  }
-  
-  /* References Section */
-  .page-container .references {
-    background-color: #f1f1f1;
-    padding: 20px;
-    border-left: 5px solid #0f4c81;
-    border-radius: 4px;
-  }
-  
+}

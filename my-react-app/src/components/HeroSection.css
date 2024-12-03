@@ -1,0 +1,66 @@
+/* HeroSection.css */
+.hero-container {
+    background-image: url("../assets/mason_pond.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom; /* Aligns the image to the bottom */
+
+    background-size: cover;
+    color: #FAFAFA;
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  
+  .hero-content {
+    max-width: 1000px;
+    padding: 0px 30px 50px 30px;
+    border-radius: 2rem;
+    /* background-color: rgba(0, 0, 0, 0.61); */
+    backdrop-filter: blur(0px);
+    margin-bottom:13rem;
+  }
+  
+  .hero-content h1 {
+    /* background: gray; */
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    /* color:white; */
+
+  }
+  
+  .hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    /* background-color: rgba(0, 0, 0, 0.61); */
+    backdrop-filter: blur(2px);
+    font-weight:800;
+    color: #E63946
+  }
+  
+  .hero-button {
+    background-color: #E63946;
+    color: #FAFAFA;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-button:hover {
+    background-color: #F4A261;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2em;
+    }
+    .hero-content p {
+      font-size: 1em;
+    }
+  }
+  

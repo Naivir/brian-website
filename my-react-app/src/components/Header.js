@@ -3,7 +3,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import './Header.css';
-// import logo from '../assets/gmu-logo.png'; // Ensure you have a high-quality logo image
+import logo from '../assets/logo.png'; // Ensure you have a high-quality logo image
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
       <Container>
         <Navbar.Brand as={NavLink} to="/">
           <img
-            // src={logo}
+            src={logo}
             alt="Website Logo"
             className="logo"
           />
@@ -20,7 +20,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="navbar-nav" className="custom-toggler" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={NavLink} to="/" exact="true" activeClassName="active-link">
+            <Nav.Link as={NavLink} to="/high-work-load" exact="true" activeClassName="active-link">
               High Workload
             </Nav.Link>
             <Nav.Link as={NavLink} to="/budget" activeClassName="active-link">

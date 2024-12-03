@@ -1,55 +1,79 @@
 /* src/pages/AdjunctIssues.css */
 
+/* General Styling */
+.page-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* Image Styling */
 .page-container img {
-    margin-bottom: 20px;
-    border: 2px solid #0f4c81;
+  margin-bottom: 20px;
+  border: none;
+}
+
+/* Section Titles */
+.page-container h2 {
+  color: #0f4c81;
+  margin-bottom: 20px;
+}
+
+.page-container h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #0f4c81;
+  display: flex;
+  align-items: center;
+}
+
+.page-container h3 svg {
+  margin-right: 10px;
+}
+
+/* Table Styling */
+.modern-table {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modern-table th {
+  background-color: #0f4c81;
+  color: #fff;
+}
+
+.modern-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.modern-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Call to Action Section */
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-section button {
+  padding: 10px 30px;
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 50px 20px;
   }
-  
-  /* Section Titles */
-  .page-container h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #0f4c81;
-    display: flex;
-    align-items: center;
+
+  .cta-section h2 {
+    font-size: 1.5rem;
   }
-  
-  .page-container h3 svg {
-    margin-right: 10px;
+
+  .cta-section p {
+    font-size: 1rem;
   }
-  
-  /* List Styling */
-  .page-container ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
-  .page-container ul li {
-    margin-bottom: 10px;
-    color: #555555;
-  }
-  
-  /* References Section */
-  .page-container .references {
-    background-color: #f1f1f1;
-    padding: 20px;
-    border-left: 5px solid #0f4c81;
-    border-radius: 4px;
-  }
-  
-  /* Additional Issues Section */
-  .page-container .additional-issues {
-    margin-top: 30px;
-  }
-  
-  .page-container .additional-issues ul {
-    list-style-type: square;
-    padding-left: 20px;
-  }
-  
-  .page-container .additional-issues ul li {
-    margin-bottom: 10px;
-    color: #555555;
-  }
-  
+}

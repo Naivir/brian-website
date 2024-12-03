@@ -2,9 +2,13 @@
 
 /* Custom Navbar Styles */
 .custom-navbar {
-    background-color: #2F4F4F; /* Dark Slate Gray */
+    background-color: #78898b; /* Dark Slate Gray */
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other elements */
   }
   
   /* Logo Styling */

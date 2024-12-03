@@ -1,0 +1,222 @@
+/* src/pages/HomePage.css */
+
+/* General Styling */
+.homepage {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Hero Section */
+  .homepage-hero {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 60px 0;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0f4c81;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #555555;
+  }
+  
+  /* Poster Image Styling */
+  .poster-image {
+    max-height: 800px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .poster-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Core Issues Section */
+  .core-issues-section .section-title {
+    font-size: 2.5rem;
+    color: #0f4c81;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .issue-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  .issue-card {
+    border: 2px solid #0f4c81; /* Navy blue border for distinction */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    background-color: #ffffff; /* White background */
+    padding: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .issue-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f0f8ff; /* Light blue background on hover */
+  }
+  
+  .issue-icon {
+    background-color: #0f4c81; /* Navy blue background */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+  }
+  
+  .issue-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f4c81;
+  }
+  
+  .issue-card .card-text {
+    font-size: 1rem;
+    color: #555555;
+  }
+  
+  /* Advocacy Section */
+  .advocacy-section .section-title {
+    font-size: 2.5rem;
+    color: #0f4c81;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .advocacy-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+  }
+  
+  .advocacy-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+  
+  .advocacy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .advocacy-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .advocacy-card .card-title {
+    color: #0f4c81;
+    font-weight: bold;
+  }
+  
+  .advocacy-card .card-text {
+    color: #555555;
+  }
+  
+  /* Call to Action Section */
+  .homepage-cta-section {
+    background-color: #0f4c81;
+    color: #fff;
+  }
+  
+  .cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .homepage-cta-section .btn {
+    padding: 10px 30px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .homepage-cta-section .btn:hover {
+    background-color: #ffd700;
+    color: #0f4c81;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+    .poster-image {
+      max-height: 600px;
+    }
+  
+    .section-title {
+      text-align: center;
+    }
+  
+    .core-issues-section .section-title,
+    .advocacy-section .section-title {
+      text-align: center;
+    }
+  
+    .issue-card {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: center;
+    }
+  
+    .issue-icon {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .poster-image {
+      max-height: 400px;
+    }
+  
+    .core-issues-section .section-title,
+    .advocacy-section .section-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .cta-title {
+      font-size: 2rem;
+    }
+  
+    .cta-text {
+      font-size: 1rem;
+    }
+  
+    .advocacy-card img {
+      height: 150px;
+    }
+  
+    .issue-card {
+      align-items: center;
+    }
+  }
+  
