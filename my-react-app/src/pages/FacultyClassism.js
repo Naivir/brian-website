@@ -1,11 +1,11 @@
 // src/pages/FacultyClassism.js
 import React from 'react';
-import { Container, Row, Col, Image, Table, Button, Card } from 'react-bootstrap';
+import { Container, Row, Col, Image, Table, Card } from 'react-bootstrap';
 import CardComponent from '../components/CardComponent';
-import HeroSection from '../components/HeroSection'; // New Hero component
-import CallToAction from '../components/CallToAction'; // New CTA component
+import HeroSection from '../components/HeroSection'; // Hero component
+import CallToAction from '../components/CallToAction'; // Updated CTA component
 import adjunctImage from '../assets/adjunct.jpg'; // Ensure this image exists
-import { FaUserTie, FaBalanceScale, FaExclamationTriangle } from 'react-icons/fa'; // Added FaExclamationTriangle for emphasis
+import { FaUserTie, FaExclamationTriangle } from 'react-icons/fa'; // Updated icon
 import './FacultyClassism.css';
 
 const FacultyClassism = () => {
@@ -112,7 +112,7 @@ const FacultyClassism = () => {
                       <li>6 credits in teaching, 3 in research, 3 in service</li>
                       <li>
                         For more information on strict requirements for tenure-track, look at{' '}
-                        <a href="#high-workload" target="_blank" rel="noopener noreferrer">
+                        <a href="/high-workload" target="_blank" rel="noopener noreferrer">
                           High Workload Page
                         </a>
                       </li>
@@ -285,9 +285,9 @@ const FacultyClassism = () => {
               ]}
             />
             {/* Enhanced Emphasis */}
-            <div className="gender-emphasis">
-              <FaBalanceScale size={30} className="emphasis-icon" />
-              <p className="emphasis-text">
+            <div className="gender-emphasis mt-3 d-flex align-items-center">
+              <FaExclamationTriangle size={40} className="emphasis-icon text-danger me-3" />
+              <p className="emphasis-text mb-0">
                 Addressing this inequality is crucial for fostering an inclusive and fair academic environment.
               </p>
             </div>
@@ -296,12 +296,14 @@ const FacultyClassism = () => {
 
         {/* Call to Action Section */}
         <CallToAction
-          title="Advocate for Change"
-          text="It is imperative to advocate for fair compensation and better working conditions for all faculty members. By ensuring that both tenure-track and non-tenure-track faculty are adequately supported, GMU can foster a more inclusive and equitable academic environment that benefits educators and students alike."
-          buttonText="Learn More"
-          buttonLink="/join-our-movement"
+          title="Advocate for Balanced Workloads"
+          text="To foster a more conducive environment for research excellence, it is imperative to reevaluate the workload requirements. Emphasizing quality over quantity will not only enhance the academic contributions of faculty but also enrich the educational experience of students."
+          buttonText="Share Your Opinion"
+          buttonLink="/join-our-movement" // Internal route
+          isExternal={false} // Indicates internal routing
         />
 
+        {/* Source Link at Bottom */}
       </Container>
     </>
   );

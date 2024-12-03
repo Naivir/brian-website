@@ -8,6 +8,8 @@ import gmuLogo from '../assets/gmu-logo.png'; // New asset
 import studentAidGraph from '../assets/student-aid-graph.jpg'; // New asset
 import { FaMoneyBillWave, FaChartPie, FaExclamationCircle } from 'react-icons/fa';
 import './FacultyBudget.css';
+import { Link } from 'react-router-dom';
+
 
 const FacultyBudget = () => {
   const budgetLinks = [
@@ -194,21 +196,28 @@ const FacultyBudget = () => {
           </Col>
         </Row>
 
-        {/* Call to Action Section */}
-        <Row className="mt-5" id="cta-section">
-          <Col>
-            <div className="cta-section text-center p-5 rounded">
-              <h2>Advocate for Change</h2>
-              <p>
-                It is imperative to advocate for fair compensation and better working conditions for all faculty members. By ensuring that both tenure-track and non-tenure-track faculty are adequately supported, GMU can foster a more inclusive and equitable academic environment that benefits educators and students alike.
-              </p>
-              {/* Changed button text to 'Learn More' */}
-              <Button variant="light" size="lg" href="/join-our-movement">
-                Learn More
-              </Button>
-            </div>
-          </Col>
-        </Row>
+{/* Call to Action Section */}
+<Row className="mt-5" id="cta-section">
+  <Col>
+    <div className="cta-section text-center p-5 rounded">
+      <h2>Advocate for Change</h2>
+      <p>
+        It is imperative to advocate for fair compensation and better working conditions for all faculty members. By ensuring that both tenure-track and non-tenure-track faculty are adequately supported, GMU can foster a more inclusive and equitable academic environment that benefits educators and students alike.
+      </p>
+      {/* Updated Button to use React Router's Link */}
+      <Button
+        as={Link}
+        to="/join-our-movement"
+        variant="light"
+        size="lg"
+      >
+        Learn More
+      </Button>
+    </div>
+  </Col>
+</Row>
+
+        
 
       </Container>
     </>

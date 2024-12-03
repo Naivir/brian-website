@@ -1,18 +1,27 @@
 // src/components/CallToAction.js
 import React from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
-import './CallToAction.css'; // Create this CSS file for specific styles
+import { Link } from 'react-router-dom'; // Import Link
+import './CallToAction.css'; // Ensure this CSS file exists
 
-const CallToAction = ({ title, text, buttonText, buttonLink }) => {
+const CallToAction = ({ title, text, buttonText, buttonLink, isExternal }) => {
   return (
-    <Row className="mt-5" id="cta-section">
+    <Row className="mt-5">
       <Col>
         <div className="cta-section text-center p-5 rounded">
           <h2>{title}</h2>
           <p>{text}</p>
-          <Button variant="light" size="lg" href={buttonLink}>
-            {buttonText}
-          </Button>
+          {isExternal ? (
+            <Button variant="light" size="lg" href={buttonLink} target="_blank" rel="noopener noreferrer">
+              {buttonText}
+            </Button>
+          ) : (
+            <Link to={buttonLink}>
+              <Button variant="light" size="lg">
+                {buttonText}
+              </Button>
+            </Link>
+          )}
         </div>
       </Col>
     </Row>

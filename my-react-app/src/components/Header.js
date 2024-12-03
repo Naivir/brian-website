@@ -27,7 +27,7 @@ const Header = () => {
               Faculty Budget
             </Nav.Link>
             <Nav.Link as={NavLink} to="/adjunct-issues" activeClassName="active-link">
-              Adjunct Issues
+              Faculty Classism
             </Nav.Link>
             <Nav.Link as={NavLink} to="/join-our-movement" activeClassName="active-link">
               Join Our Movement

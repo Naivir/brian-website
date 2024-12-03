@@ -8,6 +8,9 @@ import teachersTime from '../assets/highworkload_teachers_time.png';
 import { FaBook, FaUserClock, FaChalkboardTeacher, FaExclamationCircle, FaExclamationTriangle } from 'react-icons/fa';
 import './HighWorkload.css';
 
+import { Link } from 'react-router-dom';
+
+
 const HighWorkload = () => {
   const tenureLinks = [
     {
@@ -30,7 +33,7 @@ const HighWorkload = () => {
       {/* Hero Section */}
       <HeroSection
         title="Professors are Overworked at GMU"
-        subtitle="Balancing Teaching, Research, and Leadership for Academic Excellence"
+        subtitle="Addressing Overburden on Faculty and Lack of time to Research"
         backgroundImage={workloadImage}
         buttonText="Share Your Opinion"
         buttonLink="#cta-section"
@@ -192,20 +195,27 @@ const HighWorkload = () => {
           </Col>
         </Row>
 
-        {/* Call to Action Section */}
-        <Row className="mt-5" id="cta-section">
-          <Col>
-            <div className="cta-section text-center p-5 rounded">
-              <h2>Advocate for Balanced Workloads</h2>
-              <p>
-                To foster a more conducive environment for research excellence, it is imperative to reevaluate the workload requirements. Emphasizing quality over quantity will not only enhance the academic contributions of faculty but also enrich the educational experience of students.
-              </p>
-              <Button variant="warning" size="lg" href="/join-our-movement">
-                Share Your Opinion
-              </Button>
-            </div>
-          </Col>
-        </Row>
+{/* Call to Action Section */}
+<Row className="mt-5" id="cta-section">
+  <Col>
+    <div className="cta-section text-center p-5 rounded">
+      <h2>Advocate for Balanced Workloads</h2>
+      <p>
+        To foster a more conducive environment for research excellence, it is imperative to reevaluate the workload requirements. Emphasizing quality over quantity will not only enhance the academic contributions of faculty but also enrich the educational experience of students.
+      </p>
+      {/* Updated Button to use React Router's Link */}
+      <Button
+        as={Link}
+        to="/join-our-movement"
+        variant="warning"
+        size="lg"
+      >
+        Share Your Opinion
+      </Button>
+    </div>
+  </Col>
+</Row>
+
       </Container>
     </>
   );
