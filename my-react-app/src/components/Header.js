@@ -29,6 +29,9 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/adjunct-issues" activeClassName="active-link">
               Adjunct Issues
             </Nav.Link>
+            <Nav.Link as={NavLink} to="/join-our-movement" activeClassName="active-link">
+              Join Our Movement
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

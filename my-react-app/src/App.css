@@ -7,6 +7,10 @@ body, html, #root {
   height: 100%;
 }
 
+html {
+  scroll-behavior: auto;
+}
+
 /* Set base font styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

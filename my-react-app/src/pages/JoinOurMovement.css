@@ -1,0 +1,30 @@
+/* src/pages/JoinOurMovement.css */
+
+.join-our-movement .section-title {
+    font-size: 2.5rem;
+    color: #0f4c81;
+    margin-bottom: 20px;
+  }
+  
+  .social-media-icons .social-icon {
+    margin: 0 15px;
+    transition: transform 0.2s;
+  }
+  
+  .social-media-icons .social-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .petition-card {
+    border: 2px solid #dc3545;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff3f3;
+  }
+  
+  .petition-message {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #dc3545;
+  }
+  
