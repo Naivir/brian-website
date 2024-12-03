@@ -1,19 +1,10 @@
-/* src/pages/HighWorkload.css */
-
-/* General Styling */
-.page-container {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Image Styling */
-.page-container img {
-  margin-bottom: 20px;
-  border: none;
-}
+/* src/pages/FacultyBudget.css */
 
 /* Section Titles */
 .section-title {
-  margin-bottom: 15px;
+  font-size: 2.5rem;
+  color: #0f4c81; /* Primary color */
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
@@ -22,83 +13,93 @@
   margin-right: 10px;
 }
 
-/* Overview Section Styling */
-.section-overview {
-  background-color: #f0f8ff; /* AliceBlue - light tint of primary color */
-  padding: 20px;
+/* Icon Styling */
+.icon-red {
+  color: #E63946; /* Red color */
+  margin-right: 10px;
+}
+
+/* Custom Progress Bar Container */
+.progress-bar-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* Custom Progress Bar to handle text inside and overflow */
+.custom-progress-bar {
+  height: 30px;
+  border-radius: 5px;
+  overflow: visible; /* Allow overflow for the label */
+}
+
+.custom-progress-bar .progress-bar {
+  position: relative;
+}
+
+.custom-progress-bar .progress-bar .progress-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  overflow: visible;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white; /* Ensure contrast */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Enhance readability */
+}
+
+/* Key Ideas Cards */
+.key-idea-card {
+  border: 2px solid #0f4c81; /* Primary color */
   border-radius: 10px;
-}
-
-.overview-icon {
-  color: #0f4c81; /* Primary color */
-}
-
-.overview-title {
-  color: #0f4c81; /* Primary color */
-}
-
-/* Teaching Load Section Styling */
-.section-teaching {
-  background-color: #e6f2ff; /* Lighter tint of primary color */
   padding: 20px;
-  border-radius: 10px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Ensures the card takes full height of the parent */
 }
 
-.teaching-icon {
-  color: #1a5a99; /* Slightly lighter shade */
+.key-idea-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.teaching-title {
-  color: #1a5a99; /* Slightly lighter shade */
-}
-
-/* Tenure and Promotion Section Styling */
-.section-tenure {
-  background-color: #d9e6f2; /* Even lighter tint */
+/* StatsCard Component */
+.stats-card {
+  text-align: center;
   padding: 20px;
+  border: 2px solid #E63946; /* Accent color */
   border-radius: 10px;
+  background-color: #fff3f3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1; /* Ensures all StatsCards have equal width */
 }
 
-.tenure-icon {
-  color: #3a7ca5; /* Another shade within the palette */
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.tenure-title {
-  color: #3a7ca5; /* Another shade within the palette */
-}
-
-/* Work Hours Comparison Section Styling */
-.section-workhours {
-  background-color: #cce0ef; /* Another light tint */
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.workhours-title {
-  color: #0f4c81; /* Primary color */
-}
-
-/* Supporting Data Section */
-.supporting-data-list {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.supporting-data-list li {
+.stats-card .icon {
   margin-bottom: 10px;
+}
+
+.stats-card .card-title {
+  font-size: 1.5rem;
+  color: #E63946; /* Accent color */
+}
+
+.stats-card .card-text {
+  font-size: 1.2rem;
   color: #555555;
 }
 
-/* Call to Action Section */
+/* CTA Section */
 .cta-section {
-  background-color: #0f4c81;
+  background-color: #0f4c81; /* Primary color */
   color: #fff;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta-section:hover {
-  background-color: #0d3b6e;
-  transform: scale(1.02);
+  padding: 60px 20px;
+  border-radius: 10px;
 }
 
 .cta-section h2 {
@@ -111,28 +112,92 @@
   margin-bottom: 30px;
 }
 
-.cta-section button {
+.cta-section .btn {
   padding: 10px 30px;
   font-size: 1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.cta-section button:hover {
-  background-color: #ffd700;
-  color: #0f4c81;
+.cta-section .btn:hover {
+  background-color: #ffd700; /* Secondary color */
+  color: #0f4c81; /* Primary color */
+}
+
+/* Study Image Adjustments */
+.study-image-container {
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.study-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Image Source Attribution */
+.image-source a {
+  color: #E63946; /* Accent color */
+  text-decoration: none;
+}
+
+.image-source a:hover {
+  text-decoration: underline;
+}
+
+/* Modern Table Styling */
+.modern-table th {
+  background-color: #0f4c81;
+  color: white;
+}
+
+.modern-table td {
+  vertical-align: middle;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .cta-section {
-    padding: 50px 20px;
+  .section-title {
+    font-size: 2rem;
+    justify-content: center;
   }
 
   .cta-section h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .cta-section p {
     font-size: 1rem;
   }
+
+  /* Reduce image container width on smaller screens */
+  .study-image-container {
+    max-width: 100%;
+  }
+
+  /* Adjust Progress Bar Labels */
+  .custom-progress-bar .progress-label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Hover Effects for Social Icons */
+.social-media-icons .social-icon {
+  margin: 0 15px;
+  transition: transform 0.2s;
+}
+
+.social-media-icons .social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Learn More Link Styling */
+.learn-more-link {
+  color: #0f4c81; /* Primary color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.learn-more-link:hover {
+  text-decoration: underline;
 }

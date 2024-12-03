@@ -35,19 +35,19 @@ const HomePage = () => {
   const advocacyGroups = [
     {
       image: advocacyImage1,
-      name: 'Faculty United',
+      name: 'Placeholder',
       description: 'A collective voice advocating for faculty rights and better working conditions.',
       link: 'https://facultyunited.example.com',
     },
     {
       image: advocacyImage2,
-      name: 'Academic Alliance',
+      name: 'Placeholder',
       description: 'Promoting academic freedom and equitable treatment across all departments.',
       link: 'https://academicalliance.example.com',
     },
     {
       image: advocacyImage3,
-      name: 'Research Advocates',
+      name: 'Placeholder',
       description: 'Supporting faculty in their research endeavors and combating underfunding.',
       link: 'https://researchadvocates.example.com',
     },

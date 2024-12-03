@@ -1,85 +1,138 @@
 /* src/pages/FacultyBudget.css */
 
-/* General Styling */
-.page-container {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Image Styling */
-.page-container img {
-  margin-bottom: 20px;
-  border: none;
-}
-
 /* Section Titles */
-.page-container h2 {
-  color: #0f4c81;
+.section-title {
+  font-size: 2.5rem;
+  color: #0f4c81; /* Primary color */
   margin-bottom: 20px;
-}
-
-.page-container h3 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: #0f4c81;
   display: flex;
   align-items: center;
 }
 
-.page-container h3 svg {
+.budget-intro {
+  align-self: start;
+}
+
+.section-title svg {
   margin-right: 10px;
 }
 
+/* Custom Progress Bar to handle text overflow */
 /* Progress Bars */
-.progress {
+.progress-bar-container {
+  position: relative;
+}
+
+.custom-progress-bar {
+  position: relative;
   height: 25px;
+  background-color: #939393; /* Darker gray for unfilled portion */
   border-radius: 12px;
+  overflow: hidden;
 }
 
 .progress-bar {
-  line-height: 25px;
+  height: 100%;
+  border-radius: 12px;
+  background-size: 1rem 1rem; /* Adjust stripe size */
+}
+
+.striped {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 1rem 1rem;
+}
+
+.animated {
+  animation: progress-bar-stripes 1s linear infinite;
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 1rem 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.progress-bar-label {
+  position: absolute;
+  /* top: 50%; */
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  color: white;
+  z-index: 2;
   font-size: 0.9rem;
+  pointer-events: none;
 }
 
-/* Table Styling */
-.modern-table {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-.modern-table th {
-  background-color: #0f4c81;
-  color: #fff;
-}
 
-.modern-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
 
-.modern-table tr:hover {
-  background-color: #f1f1f1;
-}
-
-/* Card Component Styling */
-.custom-card {
-  border: none;
+/* Key Ideas Cards */
+.key-idea-card {
+  border: 2px solid #0f4c81; /* Primary color */
   border-radius: 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Ensures the card takes full height of the parent */
 }
 
-.custom-card .card-title {
-  color: #0f4c81;
-  font-weight: bold;
+.key-idea-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.custom-card .card-text {
+/* StatsCard Component */
+.stats-card {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #E63946; /* Accent color */
+  border-radius: 10px;
+  background-color: #fff3f3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1; /* Ensures all StatsCards have equal width */
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stats-card .icon {
+  margin-bottom: 10px;
+}
+
+.stats-card .card-title {
+  font-size: 1.5rem;
+  color: #E63946; /* Accent color */
+}
+
+.stats-card .card-text {
+  font-size: 1.2rem;
   color: #555555;
 }
 
-.custom-card .btn {
-  margin-top: 10px;
+/* CTA Section */
+.cta-section {
+  background-color: #0f4c81; /* Primary color */
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 10px;
 }
 
-/* Call to Action Section */
 .cta-section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
@@ -88,22 +141,98 @@
   margin-bottom: 30px;
 }
 
-.cta-section button {
+.cta-section .btn {
   padding: 10px 30px;
   font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-section .btn:hover {
+  background-color: #ffd700; /* Secondary color */
+  color: #0f4c81; /* Primary color */
+}
+
+/* Study Image Adjustments */
+.study-image-container {
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.study-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Image Source Attribution */
+.image-source a {
+  color: #E63946; /* Accent color */
+  text-decoration: none;
+}
+
+.image-source a:hover {
+  text-decoration: underline;
+}
+
+/* Modern Table Styling */
+.modern-table th {
+  background-color: #0f4c81;
+  color: white;
+}
+
+.modern-table td {
+  vertical-align: middle;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .cta-section {
-    padding: 50px 20px;
+  .section-title {
+    font-size: 2rem;
+    justify-content: center;
   }
 
   .cta-section h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .cta-section p {
     font-size: 1rem;
   }
+
+  /* Reduce image container width on smaller screens */
+  .study-image-container {
+    max-width: 100%;
+  }
+
+  /* Adjust Progress Bar Labels */
+  .custom-progress-bar .d-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .custom-progress-bar span {
+    font-size: 0.9rem;
+  }
 }
+
+/* Hover Effects for Social Icons */
+.social-media-icons .social-icon {
+  margin: 0 15px;
+  transition: transform 0.2s;
+}
+
+.social-media-icons .social-icon:hover {
+  transform: scale(1.1);
+}
+
+
+/* .progress-bar-container {
+  position: relative;
+}
+
+.custom-progress-bar {
+  position: relative;
+  height: 1.5rem; /* Adjust as needed 
+} 
+*/
+
