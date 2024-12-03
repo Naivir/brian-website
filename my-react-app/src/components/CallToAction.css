@@ -1,0 +1,35 @@
+/* src/components/CallToAction.css */
+
+.cta-section {
+    background-color: #245681; /* Primary color */
+    color: #fff;
+    padding: 60px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 800;
+  }
+  
+  .cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    /* color: #E63946; */
+    color:antiquewhite;
+  }
+  
+  .cta-section .btn {
+    padding: 10px 30px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .cta-section .btn:hover {
+    background-color: #ffd700; /* Secondary color */
+    color: #0f4c81; /* Primary color */
+  }
+  

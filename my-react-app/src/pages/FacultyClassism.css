@@ -1,24 +1,93 @@
-/* src/pages/FacultyBudget.css */
+/* src/pages/FacultyClassism.css */
 
-/* Section Titles */
-.section-title {
-  font-size: 2.5rem;
-  color: #0f4c81; /* Primary color */
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+/* General Styling */
+.page-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.budget-intro {
-  align-self: flex-start;
-}
-
-.section-title svg {
+/* Icon Styling */
+.icon-red {
+  color: #E63946; /* Red color */
   margin-right: 10px;
 }
 
-/* Custom Progress Bar to handle text overflow */
-/* Progress Bars */
+.faculty-classism-intro {
+  align-self: flex-start;
+}
+
+.budget-deficit {
+  max-width: 800px;
+  /* place-self: center; */
+}
+
+/* Employment Types Section */
+.employment-types-section h3 {
+  color: #0f4c81; /* Primary color */
+  margin-bottom: 20px;
+}
+
+.employment-types-section h4 {
+  color: #0f4c81; /* Primary color */
+  margin-bottom: 10px;
+}
+
+.employment-types-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.employment-types-section ul li {
+  margin-bottom: 10px;
+}
+
+/* Employment Cards */
+.employment-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.employment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Conclusion Note */
+.conclusion-note {
+  font-weight: bold;
+  color: #E63946; /* Accent color */
+  margin-top: 20px;
+}
+
+/* Percentage Tenure Section */
+.percentage-tenure-section h3 {
+  color: #0f4c81; /* Primary color */
+  margin-bottom: 20px;
+}
+
+/* Gender Disparity Emphasis */
+.gender-disparity-section {
+  background-color: #f8d7da; /* Light red background for emphasis */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.gender-disparity-section .emphasis-icon {
+  color: #E63946; /* Accent color */
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.gender-disparity-section .emphasis-text {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Budget Allocation Breakdown Section */
 .progress-bar-container {
   position: relative;
 }
@@ -64,17 +133,7 @@
   }
 }
 
-.progress-bar-label {
-  position: absolute;
-  /* left: 50%; */
-  /* top: 50%; */
-  /* transform: translate(-50%, -50%); */
-  white-space: nowrap;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Enhance readability */
-}
+
 
 /* GMU Logo Spending Section */
 .gmu-logo-section img {
@@ -129,51 +188,6 @@
   text-decoration: underline;
 }
 
-/* CTA Section */
-.cta-section {
-  background-color: #0f4c81; /* Primary color */
-  color: #fff;
-  padding: 60px 20px;
-  border-radius: 10px;
-}
-
-.cta-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.cta-section p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.cta-section .btn {
-  padding: 10px 30px;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.cta-section .btn:hover {
-  background-color: #ffd700; /* Secondary color */
-  color: #0f4c81; /* Primary color */
-}
-
-/* Image Source Attribution */
-.image-source a {
-  color: #E63946; /* Accent color */
-  text-decoration: none;
-}
-
-.image-source a:hover {
-  text-decoration: underline;
-}
-
-/* Faculty Composition Source Note */
-.source-note {
-  font-size: 0.9rem;
-  color: #555;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .custom-progress-bar {
@@ -198,6 +212,24 @@
   }
 
   .cta-section p {
+    font-size: 1rem;
+  }
+
+  /* Employment Types Section Adjustments */
+  .employment-types-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .employment-types-section h4 {
+    font-size: 1.2rem;
+  }
+
+  /* Gender Disparity Section Adjustments */
+  .gender-disparity-section {
+    padding: 15px;
+  }
+
+  .gender-disparity-section .emphasis-text {
     font-size: 1rem;
   }
 }

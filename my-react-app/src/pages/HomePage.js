@@ -5,9 +5,9 @@ import { FaLightbulb, FaHandsHelping, FaBullhorn } from 'react-icons/fa';
 import { Link } from 'react-router-dom'; // Import Link for internal navigation
 import './HomePage.css';
 import posterImage from '../assets/poster.jpg'; // Ensure this image exists
-import advocacyImage1 from '../assets/poster.jpg'; // Placeholder images
-import advocacyImage2 from '../assets/poster.jpg';
-import advocacyImage3 from '../assets/poster.jpg';
+import advocacyImage1 from '../assets/veanea.jpg'; // Placeholder images
+import advocacyImage2 from '../assets/ateva.jpeg';
+import advocacyImage3 from '../assets/aaup.png';
 import HeroSection from '../components/HeroSection'; // New Hero component
 
 const HomePage = () => {
@@ -34,22 +34,22 @@ const HomePage = () => {
 
   const advocacyGroups = [
     {
+        image: advocacyImage3,
+        name: 'Virginia Association of Colleges and Teacher Educators',
+        description: 'The New Deal for Higher Education is a campaign initiated by the American Association of University Professors (AAUP) and the American Federation of Teachers (AFT) to advocate for substantial federal investment in higher education, aiming to reestablish it as a public good and address issues such as accessibility, labor practices, inequities, and academic freedom.',
+        link: 'https://www.ateva.org/advocacy-and-polic',
+    },
+    {
       image: advocacyImage1,
-      name: 'Placeholder',
-      description: 'A collective voice advocating for faculty rights and better working conditions.',
-      link: 'https://facultyunited.example.com',
+      name: 'AAUP New Deal',
+      description: 'The Virginia Education Association (VEA) is a union dedicated to advancing quality instruction, securing adequate funding, and ensuring excellent working conditions for Virginia public educators.',
+      link: 'https://www.aaup.org/article/new-deal-higher-education',
     },
     {
       image: advocacyImage2,
-      name: 'Placeholder',
-      description: 'Promoting academic freedom and equitable treatment across all departments.',
-      link: 'https://academicalliance.example.com',
-    },
-    {
-      image: advocacyImage3,
-      name: 'Placeholder',
-      description: 'Supporting faculty in their research endeavors and combating underfunding.',
-      link: 'https://researchadvocates.example.com',
+      name: 'Virginia Education Association',
+      description: 'The Virginia Association of Colleges and Teacher Educators (VACTE) is an inclusive organization that promotes the professional development of pre-service and in-service teachers, as well as school/university partnerships to enhance PreK-12 student learning and well-being. ',
+      link: 'https://www.veanea.org/about/who-we-are/',
     },
   ];
 
@@ -116,6 +116,7 @@ const HomePage = () => {
             </Col>
           ))}
         </Row>
+        <p>Images belong to respective websites</p>
       </Container>
 
       {/* Call to Action Section */}
@@ -125,7 +126,7 @@ const HomePage = () => {
           <p className="cta-text">
             Stand with your fellow faculty members to advocate for fair compensation, manageable workloads, and the resources needed to excel in academia. Together, we can create a supportive and thriving academic environment at GMU.
           </p>
-          <Button variant="warning" size="lg" href="https://www.yoursupportlink.com">
+          <Button variant="warning" size="lg" href="/join-our-movement">
             Get Involved
           </Button>
         </Container>

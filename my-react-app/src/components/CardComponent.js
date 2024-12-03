@@ -5,7 +5,7 @@ import './CardComponent.css'; // Ensure this CSS file exists for Card-specific s
 
 const CardComponent = ({ title, text, links }) => {
   return (
-    <Card className="custom-card shadow-sm">
+    <Card className="custom-card shadow">
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{text}</Card.Text>

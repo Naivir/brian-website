@@ -34,7 +34,7 @@ const FacultyBudget = () => {
     { name: 'Part-Time Faculty', value: 7.2 },
   ];
 
-  const COLORS = ['#dc3545']; // Updated to include appropriate colors
+  const COLORS = ['#0f4c81']; // Keeping a single color as per the latest code
 
   const facultyComposition = {
     fullTime: {
@@ -79,7 +79,8 @@ const FacultyBudget = () => {
             </p>
           </Col>
           <Col md={6} className="budget-intro">
-            <h2><FaMoneyBillWave className="icon-red" /> The Financial Struggles of GMU's Faculty</h2>
+            {/* Removed 'icon-red' class to keep the icon in default blue */}
+            <h2><FaMoneyBillWave /> The Financial Struggles of GMU's Faculty</h2>
             <p>
               Despite receiving substantial funding from prominent federal officials, including a $50 million donation from a former judge, George Mason University (GMU) is projected to face a $13.2 million budget deficit in 2025. This financial strain affects critical areas such as libraries, which are cutting subscriptions to numerous scholarly databases, thereby impeding research capabilities.{' '}
               <a href="https://www.highereddive.com/news/george-mason-antonin-scalia-law-school-faces-38m-losses/728321/#:~:text=And%20that" target="_blank" rel="noopener noreferrer">
@@ -100,38 +101,35 @@ const FacultyBudget = () => {
           <Col>
             <h3><FaChartPie className="icon-red" /> Budget Allocation Breakdown (Fiscal Year 2024-2025)</h3>
             {budgetData.map((item, index) => {
-  const filledWidth = item.value * 2; // Calculate filled width
-  const isSmallBar = item.value <= 30; // Set a threshold for "small" bars
+              const filledWidth = item.value * 2; // Calculate filled width
+              const isSmallBar = item.value <= 30; // Set a threshold for "small" bars
 
-  return (
-    <div className="progress-bar-container mb-3" key={index}>
-      <div className="progress custom-progress-bar">
-        <div
-          className="progress-bar striped animated"
-          role="progressbar"
-          style={{
-            width: `${filledWidth}%`,
-            backgroundColor: COLORS[index % COLORS.length],
-          }}
-        ></div>
-        <span
-          className="progress-bar-label"
-          style={{
-            left: isSmallBar ? "5px" : `calc(${filledWidth}% / 2)`, // Position dynamically
-            transform: isSmallBar ? "none" : "translateX(-50%)", // Prevent centering if too small
-            fontSize: "1rem",
-            whiteSpace: "nowrap", // Prevent wrapping
-          }}
-        >
-          {`${item.name} - ${item.value}%`}
-        </span>
-      </div>
-    </div>
-  );
-})}
-
-
-
+              return (
+                <div className="progress-bar-container mb-3" key={index}>
+                  <div className="progress custom-progress-bar">
+                    <div
+                      className="progress-bar striped animated"
+                      role="progressbar"
+                      style={{
+                        width: `${filledWidth}%`,
+                        backgroundColor: COLORS[index % COLORS.length],
+                      }}
+                    ></div>
+                    <span
+                      className="progress-bar-label"
+                      style={{
+                        left: isSmallBar ? "5px" : `calc(${filledWidth}% / 2)`, // Position dynamically
+                        transform: isSmallBar ? "none" : "translateX(-50%)", // Prevent centering if too small
+                        fontSize: "1rem",
+                        whiteSpace: "nowrap", // Prevent wrapping
+                      }}
+                    >
+                      {`${item.name} - ${item.value}%`}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
             <p className="mt-3">
               It's concerning that classified salaries account for such a high percentage of the budget, while adjunct and part-time faculty are compensated poorly despite comprising 48% of our faculty. This imbalance not only affects faculty morale but also the quality of education provided to students.
             </p>
@@ -139,7 +137,7 @@ const FacultyBudget = () => {
         </Row>
 
         {/* Impact of Budget Deficit Section */}
-        <Row className="mt-5">
+        <Row className="mt-5 budget-deficit">
           <Col>
             <CardComponent
               title="Impact of Budget Deficit"
@@ -147,21 +145,16 @@ const FacultyBudget = () => {
               links={[
                 {
                   url: 'https://infoguides.gmu.edu/collections/budget',
-                  label: 'GMU Budget Information',
+                  label: 'Learn More', // Changed label to 'Learn More'
                 },
               ]}
             />
-            {/* Replace Button with Link */}
-            <p>
-              <a href="#more-details" className="learn-more-link">
-                Learn more
-              </a>
-            </p>
+            {/* Removed the redundant 'Learn more' link below the card */}
           </Col>
         </Row>
 
         {/* GMU Logo Spending Section */}
-        <Row className="mt-5">
+        <Row className="mt-5 gmu-logo-section">
           <Col md={6} className="order-md-1">
             <Image src={gmuLogo} alt="GMU Logo" fluid rounded className="shadow-sm" loading="lazy" />
             {/* Source Attribution for GMU Logo Image */}
@@ -181,7 +174,7 @@ const FacultyBudget = () => {
         </Row>
 
         {/* Student Aid for GMU Section */}
-        <Row className="mt-5">
+        <Row className="mt-5 student-aid-section">
           <Col md={6} className="order-md-1">
             <h3><FaExclamationCircle className="icon-red" /> Student Aid for GMU</h3>
             <p>
@@ -192,7 +185,7 @@ const FacultyBudget = () => {
               Teachers are already under considerable stress, and their role extends beyond instruction to mentoring students facing mental health crises. The financial burden exacerbates this issue, as students struggle to balance academic responsibilities with part-time work and financial instability. This situation not only affects students' academic performance but also their overall well-being.
             </p>
           </Col>
-          <Col md={6} className="d-flex align-items-center order-md-2">
+          <Col md={6} className="order-md-2">
             <Image src={studentAidGraph} alt="Student Aid Distribution" fluid rounded className="shadow-sm" loading="lazy" />
             {/* Source Attribution for Student Aid Graph */}
             <p className="image-source text-muted mt-2">
@@ -201,100 +194,22 @@ const FacultyBudget = () => {
           </Col>
         </Row>
 
-        {/* Faculty Composition Section */}
-        <Row className="mt-5">
-          <Col>
-            <h3><FaChartPie className="icon-red" /> Faculty Composition at GMU</h3>
-            <Table striped bordered hover responsive className="modern-table">
-              <thead>
-                <tr>
-                  <th>Category</th>
-                  <th>Count</th>
-                  <th>Percentage</th>
-                  <th>Average Salary</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Full-Time Faculty</td>
-                  <td>{facultyComposition.fullTime.count}</td>
-                  <td>{facultyComposition.fullTime.percentage}%</td>
-                  <td>{facultyComposition.fullTime.averageSalary}</td>
-                </tr>
-                <tr>
-                  <td>Part-Time Faculty</td>
-                  <td>{facultyComposition.partTime.count}</td>
-                  <td>{facultyComposition.partTime.percentage}%</td>
-                  <td>{facultyComposition.partTime.averageSalary}</td>
-                </tr>
-              </tbody>
-            </Table>
-          </Col>
-        </Row>
-
-        {/* By Rank Section */}
-        <Row className="mt-4">
-          <Col>
-            <h3>By Rank:</h3>
-            <Table striped bordered hover responsive className="modern-table">
-              <thead>
-                <tr>
-                  <th>Rank</th>
-                  <th>Average Salary</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Professors</td>
-                  <td>$157,322 (men earn ~$50k more than women)</td>
-                </tr>
-                <tr>
-                  <td>Associate Professors</td>
-                  <td>$109,334</td>
-                </tr>
-                <tr>
-                  <td>Assistant Professors</td>
-                  <td>$97,036</td>
-                </tr>
-                <tr>
-                  <td>Instructors</td>
-                  <td>$76,483</td>
-                </tr>
-              </tbody>
-            </Table>
-          </Col>
-        </Row>
-
-        {/* Gender Disparity in Salaries Section */}
-        <Row className="mt-5">
-          <Col>
-            <CardComponent
-              title="Gender Disparity in Salaries"
-              text="There is a significant gender disparity in faculty salaries at GMU. Men at the professor 12-month contract level are paid approximately $50,000 more than their female counterparts. This discrepancy highlights the need for transparent and equitable salary structures within the institution."
-              links={[
-                {
-                  url: 'https://ccbit.business.gmu.edu/wp-content/uploads/2022/03/Faculty-Overload-and-Adjunct-Pay-Matrix-2022.02.02.pdf',
-                  label: 'Faculty Overload and Adjunct Pay Matrix',
-                },
-              ]}
-            />
-          </Col>
-        </Row>
-
         {/* Call to Action Section */}
         <Row className="mt-5" id="cta-section">
           <Col>
             <div className="cta-section text-center p-5 rounded">
-              <h2>Advocate for Sustainable Budgeting</h2>
+              <h2>Advocate for Change</h2>
               <p>
-                It's crucial to push for transparent and strategic financial planning at GMU. By ensuring that budget allocations prioritize academic excellence and faculty support, we can create a thriving educational environment for both educators and students.
+                It is imperative to advocate for fair compensation and better working conditions for all faculty members. By ensuring that both tenure-track and non-tenure-track faculty are adequately supported, GMU can foster a more inclusive and equitable academic environment that benefits educators and students alike.
               </p>
-              <Button variant="light" size="lg" href="https://www.yoursupportlink.com">
-                Support Budget Transparency
+              {/* Changed button text to 'Learn More' */}
+              <Button variant="light" size="lg" href="/join-our-movement">
+                Learn More
               </Button>
             </div>
           </Col>
         </Row>
+
       </Container>
     </>
   );

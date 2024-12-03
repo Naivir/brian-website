@@ -2,8 +2,9 @@
 
 /* Custom Footer Styles */
 .custom-footer {
-    background-color: #000000; /* Dark Slate Gray */
+    background-color: black; /* Dark Slate Gray */
     color: #FFFFFF; /* White */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 40px 0;
   }
   

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Footer.css';
+import logo from '../assets/logo.png';
 // import logo from '../assets/gmu-logo.png'; // Reuse the logo if appropriate
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 
@@ -11,8 +12,9 @@ const Footer = () => {
       <Container>
         <Row>
           <Col md={4} className="mb-3">
-            {/* <img src={logo} alt="GMU Logo" className="footer-logo" /> */}
-            <p className="footer-text">Faculty Advocates at George Mason University</p>
+            <p className="footer-text">Faculty Advocates</p>
+            <img src={logo} alt="GMU Logo" className="footer-logo" />
+
           </Col>
           <Col md={4} className="mb-3">
             <h5>Quick Links</h5>
@@ -20,7 +22,7 @@ const Footer = () => {
               <li><a href="/">High Workload</a></li>
               <li><a href="/budget">Faculty Budget</a></li>
               <li><a href="/adjunct-issues">Adjunct Issues</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/join-our-movement">Join Our Movement</a></li>
             </ul>
           </Col>
           <Col md={4} className="mb-3">

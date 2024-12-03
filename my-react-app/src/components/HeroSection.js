@@ -8,7 +8,7 @@ const HeroSection = ({ title, subtitle }) => {
       <div className="hero-content">
         <h1>{title}</h1>
         <p>{subtitle}</p>
-        <a href="#join" className="hero-button">Join the Movement</a>
+        <a href="/join-our-movement" className="hero-button">Join the Movement</a>
       </div>
     </section>
   );

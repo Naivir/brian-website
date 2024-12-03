@@ -139,6 +139,7 @@
   .cta-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: white;
   }
   
   .cta-text {
@@ -205,6 +206,7 @@
   
     .cta-title {
       font-size: 2rem;
+      color: white !important;
     }
   
     .cta-text {
